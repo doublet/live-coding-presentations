@@ -39,7 +39,11 @@ function loop() {
 		 	  y : canvas.height/2, 
 		 	xVel : Math.random()* 10 -5, 
 			yVel : Math.random()* 10 -5, 
-			size :10};
+			size :2};
+	
+	p.x = p.x + p.xVel*25;
+	p.y = p.y + p.yVel*25;		
+	
 	particles.push(p); 
 	
 	if(particles.length>200) particles.shift(); 
@@ -54,9 +58,9 @@ function loop() {
 		p.x+=p.xVel; 
 		p.y+=p.yVel; 
 		
-		p.xVel *=0.96; 
-		p.yVel *=0.96;
-		p.size*=0.96;
+		p.xVel *=1.03; 
+		p.yVel *=1.03;
+		p.size*=1.03;
 	}
 }
 
